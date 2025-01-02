@@ -60,6 +60,7 @@
         }
 
         .page3 {
+            flex-direction: row;
             background-color: #ffffff;
             color: white;
         }
@@ -78,20 +79,23 @@
         .contact-side {
             display: flex;
             flex-direction: column;
-            justify-content:start; /* Align content to the top */
+            justify-content: start;
+            align-items: center; /* Center horizontally */
             width: 100%;
-            height: 100%;
-            padding-left: 20px; /* Added padding for better alignment */
+            height: 100vh; /* Take full height of the viewport */
+            padding: 20px; /* Add padding for spacing */
         }
+        
         .contact-details {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+            flex-wrap: wrap; /* Enable wrapping on smaller screens */
+            gap: 10px; /* Add spacing between items */
             width: 100%;
-            height: 100%;
-            margin-bottom: 2rem;
-            margin-top: 20;
+            margin: 20px 0;
+            margin-top: 15%;
         }
 
         .contact-person {
@@ -122,6 +126,55 @@
             width: 80%;
             border-radius: 8px;
         }
+       
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page3 {
+                flex-direction: column; /* Stack elements vertically */
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+                margin-top: 10%;
+            }
+
+            .contact-person {
+                width: 90%; /* Full width on smaller screens */
+            }
+
+            .image-section {
+                margin-top: 20px; /* Move image further down */
+            }
+
+            .image-section img {
+                width: 90%; /* Scale down the image for smaller screens */
+            }
+
+            .contact-side {
+                padding-left: 10px; /* Reduce padding on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+                text-align: center;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .contact-person {
+                padding: 15px;
+            }
+
+            .image-section img {
+                width: 100%; /* Take full width on very small screens */
+            }
+        }
+
     </style>
 </head>
 <body>
