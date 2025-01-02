@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Page Scroll Website</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .page1 {
+            border: 15px solid #f6b316;
+            padding: 10;
+            background: url('background-image.png') no-repeat center center/cover;
+            color: white;
+        }
+        .page1 .half-circle {
+            position: absolute;
+            bottom: 2%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 400px;
+            background: rgba(0, 0, 0, 0.6);
+            border-top-left-radius: 400px;
+            border-top-right-radius: 400px;
+        }
+        .page1 .half-circle img {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 170px;
+            margin-top: 30;
+        }
+
+        .page2 {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .page3 {
+            background-color: #ffffff;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: black;
+            margin-top: 15%;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .contact-side {
+            display: flex;
+            flex-direction: column;
+            justify-content:start; /* Align content to the top */
+            width: 100%;
+            height: 100%;
+            padding-left: 20px; /* Added padding for better alignment */
+        }
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 2rem;
+            margin-top: 20;
+        }
+
+        .contact-person {
+            text-align: left;
+            background: #444;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            color: white;
+            width: 45%;
+        }
+
+        .contact-person h2 {
+            font-size: 1.5rem;
+        }
+
+        .contact-person p {
+            margin: 10px 0;
+        }
+
+        .image-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-section img {
+            width: 80%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <section class="page1">
+        <!-- <div>
+            <h1>Welcome to Page 1</h1>
+            <p>This is the first section of our scrollable website.</p>
+        </div> -->
+        <div class="half-circle">
+            <img src="unona-logo.png" alt="Center Image">
+            <p style="position: absolute;
+            bottom: 25%;
+            left: 50%;
+            transform: translateX(-50%);white-space: nowrap;">Serving Technology to the community</p>
+        </div>
+    </section>
+
+    <section class="page2">
+        <div>
+            <h1>Coming Soon...</h1>
+            <p>Working on to bring the best technology for you.</p>
+        </div>
+    </section>
+
+    <section class="page3">
+        <div class="contact-side">
+            <h1>Dont hesitate to contact us...</h1>
+            <div class="contact-details">
+                <div class="contact-person">
+                    <h2>Ance John </h2>
+                    <p>Email: anzey@unona.uk</p>
+                    <p>Phone: +44 07485538203</p>
+                </div>
+                <div class="contact-person">
+                    <h2>Jovita John</h2>
+                    <p>Email: jovita@unona.uk</p>
+                    <p>Phone: +44 07394529763</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="image-section">
+            <img src="contact-img.png" alt="Image Section">
+        </div>
+    </section>
+</body>
+</html>
