@@ -174,6 +174,68 @@
                 width: 100%; /* Take full width on very small screens */
             }
         }
+        .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+button[type="submit"] {
+    background: #444;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #666;
+}
+
+/* Adjust form layout on smaller screens */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 10px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}
 
     </style>
 </head>
@@ -203,16 +265,31 @@
         <div class="contact-side">
             <h1>Dont hesitate to contact us...</h1>
             <div class="contact-details">
-                <div class="contact-person">
-                    <h2>Ance John </h2>
-                    <p>Email: anzey@unona.uk</p>
+
+                <!-- <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form> -->
+
+                <!-- Google Form -->
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc_42L6zsNE-4SkxILl7QEvltC6F7okVqJvY2W6PmqZ3Re7uQ/viewform?embedded=true" width="640" height="824" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <!-- <div class="contact-person">
+                    <h2>Unona Limited</h2>
+                    <p>Email: contact@unona.uk</p>
                     <p>Phone: +44 07485538203</p>
-                </div>
-                <div class="contact-person">
-                    <h2>Jovita John</h2>
-                    <p>Email: jovita@unona.uk</p>
-                    <p>Phone: +44 07394529763</p>
-                </div>
+                </div> -->
+
             </div>
 
         </div>
